@@ -1,0 +1,535 @@
+/* Overall Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+} 
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navbar Styling */
+.navbar{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 30px 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .logo a{
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline;
+}
+.navbar .registration li{
+    list-style: none;
+    display: inline;
+}
+.navbar .menu li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .registration li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    padding: 10px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar .registration li a:hover{
+    color: crimson;
+    background: none;
+}
+.navbar .registration .btn-crimson{
+    border-radius: 10px;
+    background-color: crimson;
+}
+/*.navbar .registration .log_out .profile-photo{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    background-color: crimson;
+    outline: none;
+    cursor: pointer;
+}
+/*.navbar .registration .log_out .btn-log:hover{
+    color: crimson;
+    background: none;
+}
+.navbar .registration .profile-photo{
+    font-size: 16px;
+    width: 200px;
+}*/
+.dashboard{
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar .registration  .notification{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    right: 250px;
+    top: 40px;
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    color: rgb(65, 65, 65);
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: #cacacacb;
+}
+.navbar .registration  .notification .badge{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: crimson;
+    color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-bottom: 2px;
+}
+.navbar .registration .messages{
+    overflow: hidden;
+    position: absolute;
+    right: 250px;
+    top: 75px;
+    display: flex;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background-color: rgb(235, 235, 235);
+    list-style: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.navbar .registration .messages h6{
+    text-align: center;
+    color: white;
+    background: crimson;
+    font-size: 15px;
+    padding: 5px;
+}
+.navbar .registration .messages a{
+    padding: 5px;
+    color: rgb(65, 65, 65);
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+.navbar .registration .messages .read-all{
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+.navbar .registration .messages a:hover{
+    transition: all 0.2s ease;
+    background: rgb(211, 211, 211);
+}
+.navbar .registration .messages .message span{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+.navbar .registration .messages .message{
+    text-align: left;
+    font-size: 15px;
+}
+.navbar .registration .messages .messaged-by{
+    text-align: left;
+    font-size: 11px;
+}
+.navbar .registration .notification:focus + .messages{
+    transform: translateY(10px);
+    opacity: 1;
+    visibility: visible;
+}
+.navbar .registration .profile{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 58px;
+    top: 5px;
+    position: relative;
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background: crimson;
+    border: 2px solid crimson;
+    border-radius: 5px;
+    padding: 3px 0;
+    width: 180px;
+    outline: none;
+}
+.navbar .registration .profile .profile-photo{
+    float: left;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+    background: #c5c5c5a6;/*
+    border: 1px solid rgba(221, 27, 27, 0.815);*/
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 5px;/*
+    margin-bottom: 10px;*/
+}
+.navbar .registration .profile .profile-photo img{
+    border-radius: 50%;
+}
+.navbar .registration .profile .profile-user{
+    width: 50%;
+    /*top: 10px;*/
+}
+.navbar .registration .profile .profile-user .fa-caret-down{
+    position: absolute;
+    display: flex;
+    float: right;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    bottom: 13px;
+    right: 10px;
+}
+.navbar .registration .wrapper{
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    top: 75px;
+    display: flex;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.navbar .registration .wrapper h6{
+    text-align: center;
+    color: white;
+    background: crimson;
+    font-size: 15px;
+    padding: 5px;
+}
+.navbar .registration  .wrapper ul{
+    background-color: rgb(235, 235, 235);
+    list-style: none;
+    width: 180px;
+}
+.navbar .registration .wrapper ul a{
+    width: 100%;
+    line-height: 35px;
+    border-radius: 15px;
+}
+.navbar .registration .wrapper ul a:hover li{
+    transition: all 0.2s ease;
+    background: rgb(211, 211, 211);/*
+    background: #9c9c9c56;*/
+}
+.navbar .registration .wrapper ul a li{
+    display: flex;
+    color: rgb(65, 65, 65);
+    /*border: 1px solid rgba(126, 126, 126, 0.397);*/
+    border-bottom: 1px solid rgb(65, 65, 65);
+    font-size: 16px;
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.navbar .registration .wrapper ul a li .icon{
+    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
+    margin-right: 10px;
+    background: #cacacacb;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.navbar .registration .profile:focus + .wrapper{
+    transform: translateY(10px);
+    opacity: 1;
+    visibility: visible;
+}
+/* Section Styling */
+section{
+    padding: 10px 0;
+}
+section .title{
+    position: relative;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 70px;
+}
+section .title::before{
+    content: "";
+    bottom: 55px;
+    left: 50%;
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+/* Home Styling */
+.home{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    min-height: 500px;
+    height: 50vh;
+    background-size: cover;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+    line-height: 65px;
+}
+.home .home-content .line-1{
+    font-weight: 500;
+    font-size: 50px;
+}
+.home .home-content .line-2{
+    font-size: 25px;
+    font-weight: 500;
+}
+.home .home-content span{
+    color: crimson;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    padding:0px 35px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+.search_home .fields{
+    display: flex;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 70px;
+    margin-left: -30px;
+}
+.search_home .search{
+    height: 47px;
+    width: 50%;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.search_home .search input{
+    height: 47px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.search_home .search input:focus{
+    border-color: crimson;
+}
+.search_home .button{
+    margin-left: 10px;
+    height: 47px;
+    width: 120px;
+    font-family: 'Poppins', sans-serif;
+}
+.search_home .button button{
+    height: 47px;
+    width: 100%;
+    color: #fff;
+    border: 2px solid crimson;
+    border-radius: 30px;
+    background: crimson;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.search_home .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+/* Achievements Styling */
+.achievements{
+    margin-bottom: 100px;
+}
+.achieve-content{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.achievements .achieve-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.achievements .achieve-content .card{
+    height: 250px;
+    width: calc(25% - 20px);
+    background: #222222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top: crimson;
+    border-left: crimson;
+    border-right: grey;
+    border-bottom: grey;
+    border-width: 2px;
+    border-top-left-radius: 50px;
+    border-style: solid;
+    box-shadow: 1px 1px 10px grey;
+}
+.achievements .achieve-content .card .box{
+    transition: all 0.3s ease-in-out;
+}
+.achievements .achieve-content .card:hover{ 
+    transform: translateY(-1%);
+}
+.achievements .achieve-content .card i{
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+    color: crimson;
+    transition: all 0.3s ease;
+    background: white;
+    border-radius: 50%;
+    padding-top: 17px;
+}
+.achievements .achieve-content .card .box .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.achievements .achieve-content .card .box p{
+    font-size: 20px;
+    margin-top: 20px;
+    border: 1px solid crimson;
+    border-style: dashed;
+}
+.achievements .achieve-content .card .box span{
+    padding: 5px 10px 5px 10px;
+    background-color: crimson;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    
+    text-transform: uppercase;
+}
+
+/* Footer Styling */
+footer{
+    font-family: 'PT Sans',sans-serif;
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: start;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{
+    margin-left: 20px;
+    color: crimson;
+}
+.social-icons{
+    float: right;
+    margin-top: 15px;
+    margin-right: 130px;
+    display: flexbox;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: crimson;
+    align-items: center;
+}
+.social-icons a{
+    color: crimson;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+.social-icons a:hover{
+    color: white;
+}

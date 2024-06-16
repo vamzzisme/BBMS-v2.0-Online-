@@ -1,0 +1,99 @@
+/* Overall Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+} 
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Content Styling */
+a{
+    color: crimson;
+}
+a:hover{
+    text-decoration: underline;
+}
+p, ul, h1, h2, h3{
+    margin-left: 30px;
+    padding: 15px;
+}
+.navbar{
+    width: 100%;
+}
+.navbar .max-width{
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.max-width{
+    padding: 20px 10px;
+    max-width: 1300px;
+}
+.navbar .logo strong{
+    color: black;
+    font-size: 45px;
+    font-weight: 600;
+}
+.navbar .logo strong span{
+    color: crimson;
+}
+
+/*Footer Styling */
+footer{
+    font-family: 'PT Sans',sans-serif;
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: start;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{
+    margin-left: 20px;
+    color: crimson;
+}
+.social-icons{
+    float: right;
+    margin-top: 15px;
+    margin-right: 130px;
+    display: flexbox;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: crimson;
+    align-items: center;
+}
+.social-icons a{
+    color: crimson;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+.social-icons a:hover{
+    color: white;
+}
+
+

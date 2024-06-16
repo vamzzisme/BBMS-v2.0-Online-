@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+
+.w3-animate-opacity{
+    background-image: url(../images/bg1.jpg);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Delete Account Styling */
+.delete_card{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 30%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -30%);
+    border: 2px solid crimson;
+    box-shadow: 1px 1px 10px rgba(220, 20, 60, 0.541);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.delete_card h1{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+.delete_index{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.delete_card .box1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete_index .email{
+    position: relative;
+    margin: 45px 0;
+    width: 48%;
+    border-bottom: 2px solid #adadad;
+}
+.delete_index .nickname{
+    position: relative;
+    margin: 45px 0;
+    width: 48%;
+    border-bottom: 2px solid #adadad;
+}
+.delete_index .email input, .delete_index .nickname input{
+    cursor: not-allowed;
+}
+.delete_index .password{
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #adadad;
+}
+.delete_index input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.delete_index label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s ease;
+    top: -5px;
+    color: rgb(255, 23, 70);
+}
+.delete_index span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 23, 70);
+    transition: 0.5s ease;
+}
+/*.delete_index input[name="email"]:focus ~ label,
+.delete_index input[name="nickname"]:focus ~ label,
+.delete_index input[name="password"]:focus ~ label,
+.delete_index input[name="email"]:valid ~ label,
+.delete_index input[name="nickname"]:valid ~ label,
+.delete_index input[name="password"]:valid ~ label{
+    top: -5px;
+    color: rgb(255, 23, 70);
+}
+.delete_index input[name="email"]:focus ~ span::before,
+.delete_index input[name="nickname"]:focus ~ span::before,
+.delete_index input[name="password"]:focus ~ span::before,
+.delete_index input[name="email"]:valid ~ span::before,
+.delete_index input[name="nickname"]:valid ~ span::before,
+.delete_index input[name="password"]:valid ~ span::before{
+    width: 100%;
+}*/
+.delete_index .button button{
+    margin-top: 45px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.delete_index .button button:hover{
+    color: crimson;
+    background: none;
+}
+.signup_link{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+.signup_link a{
+    color: crimson;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}

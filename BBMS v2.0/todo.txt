@@ -1,0 +1,21 @@
+-> Full Admin panel - all functioanlities (course= UDEMY - The Complete Web Development Course with PHP, PDO & MySQL)
+-> in messages.php after marking as read make the button 'fa fa-check' unclickable, by changing type of button or name of button
+-> add heading in message.php "MY MESSAGES"
+-> search engine // not necessary for this project
+
+
+/* If Admin Dashboard is ready:
+1. Date and time of reply must be used in date column of messages.php and also in signin_info.php not that of messages sent
+2. automatically make ms_status = replied and ms_state = 1 in messages.php
+3. send messages to message.php when ever approved donation {like message subject = 'approval of blood donated', message = '', message reply = 'Your sample is approved'}
+4. admin functionalities like, create users/edit users/ delete users/send message/delete message/edit message/ donations/admin profile
+5. restrictions that only user_role of admin can user admin.php
+
+behind PHP:
+we get input from user "$table_colomn_name = user input"
+we type SQL statement "SELECT * FROM tname WHERE table_colomn_name = :parameter";
+we then prepare it
+we then execute it by binding "table_colomn_name => $table_colomn_name";
+we then fetch the entered data from database and then loop over it and siplay it on web page.
+//ms_read{0: read, 1: not read}
+//ms_state{0: not message, 1: message came}

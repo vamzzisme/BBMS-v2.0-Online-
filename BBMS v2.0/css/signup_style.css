@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+
+.w3-animate-opacity{
+    background-image: url(../images/bg1.jpg);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sign UP Styling */
+/*
+.signup_logo{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    pointer-events: none;
+}
+.signup_logo img{
+    margin-top: -20px;
+}
+.signup_logo a{
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+}
+.signup_logo a span{
+    color: crimson;
+}*/
+.signup_card{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 15%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -15%);
+    border: 2px solid crimson;
+    box-shadow: 1px 1px 10px rgba(220, 20, 60, 0.541);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.signup_card h1{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+.signup_index{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.signup_index .full_name{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: -25px;
+    justify-content: space-between;
+}
+.signup_index .first_name{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signup_index .last_name{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signup_index .nick_name{
+    position: relative;
+    margin: 25px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signup_index .nick_name i{
+    position: absolute;
+    border: none;
+    margin: 15px 0 0 95%;
+    float: right;
+    font-size: 20px;
+    color: crimson;
+}
+.signup_index .email{
+    position: relative;
+    margin: 25px 0;
+    border-bottom: 2px solid #adadad;
+}
+/*.signup_index .security{
+    position: relative;
+    margin: 25px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signup_index .security select{
+    outline: none;
+    border: none;
+    background: none;
+    padding-left: 10px;
+    font-size: 16px;
+}*/
+.signup_index .final_password{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+    justify-content: space-between;
+}
+.signup_index .password{
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #adadad;
+    z-index: 3;
+}
+.signup_index .confirm_password{
+    position: relative;
+    margin: 10px 0;
+    border-bottom: 2px solid #adadad;
+    z-index: 3;
+}
+.signup_index input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.signup_index label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.signup_index span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 23, 70);
+    transition: 0.5s ease;
+}
+.signup_index input[name="first_name"]:focus ~ label,
+.signup_index input[name="last_name"]:focus ~ label,
+.signup_index input[name="nick_name"]:focus ~ label,
+/*.signup_index select[name="security"]:focus ~ label,*/
+.signup_index input[name="email"]:focus ~ label,
+.signup_index input[name="password"]:focus ~ label,
+.signup_index input[name="confirm_password"]:focus ~ label,
+.signup_index input[name="first_name"]:valid ~ label,
+.signup_index input[name="last_name"]:valid ~ label,
+.signup_index input[name="nick_name"]:valid ~ label,
+/*.signup_index select[name="security"]:valid ~ label,*/
+.signup_index input[name="email"]:valid ~ label,
+.signup_index input[name="password"]:valid ~ label,
+.signup_index input[name="confirm_password"]:valid ~ label{
+    top: -5px;
+    color: rgb(255, 23, 70);
+}
+.signup_index input[name="first_name"]:focus ~ span::before,
+.signup_index input[name="last_name"]:focus ~ span::before,
+.signup_index input[name="nick_name"]:focus ~ span::before,
+/*.signup_index select[name="security"]:focus ~ span::before,*/
+.signup_index input[name="email"]:focus ~ span::before,
+.signup_index input[name="password"]:focus ~ span::before,
+.signup_index input[name="confirm_password"]:focus ~ span::before,
+.signup_index input[name="first_name"]:valid ~ span::before,
+.signup_index input[name="last_name"]:valid ~ span::before,
+.signup_index input[name="nick_name"]:valid ~ span::before,
+/*.signup_index select[name="security"]:valid ~ span::before,*/
+.signup_index input[name="email"]:valid ~ span::before,
+.signup_index input[name="password"]:valid ~ span::before,
+.signup_index input[name="confirm_password"]:valid ~ span::before{
+    width: 100%;
+}
+.signup_index .button button{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.signup_index .button button:hover{
+    color: crimson;
+    background: none;
+}
+.signin_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+.signin_link a{
+    color: crimson;
+    text-decoration: none;
+}
+.signin_link a:hover{
+    text-decoration: underline;
+}

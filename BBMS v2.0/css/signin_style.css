@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+
+.w3-animate-opacity{
+    background-image: url(../images/bg1.jpg);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sign In Styling */
+/*.signin_logo{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+.signin_logo img{
+    margin-top: -20px;
+}
+.signin_logo a{
+    color: black;
+    font-size: 75px;
+    font-weight: 600;
+}
+.signin_logo a span{
+    color: crimson;
+}*/
+.signin_card{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 25%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -25%);
+    border: 2px solid crimson;
+    box-shadow: 1px 1px 10px rgba(220, 20, 60, 0.541);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.signin_card h1{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+.signin_index{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.signin_index .email{
+    position: relative;
+    margin: 45px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signin_index .password{
+    position: relative;
+    margin: 45px 0;
+    border-bottom: 2px solid #adadad;
+}
+.signin_index .password input[type="checkbox"]{
+    position: absolute;
+    float: right;
+    bottom: 5px;
+    right: 15px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+/* Checkbox */
+.signin_index .remember_password{
+    position: relative;
+    margin: 55px 0 50px 5px;
+}
+.signin_index .remember_password label{
+    color: #666666;
+    margin-top: -14px;
+    margin-left: 20px;
+}
+.signin_index .remember_password input[type="checkbox"]{
+    position: absolute;
+    float: left;
+    bottom: 5px;
+    left: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.signin_index input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.signin_index label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.signin_index span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 23, 70);
+    transition: 0.5s ease;
+}
+.signin_index input[name="email"]:focus ~ label,
+.signin_index input[name="password"]:focus ~ label,
+.signin_index input[name="email"]:valid ~ label,
+.signin_index input[name="password"]:valid ~ label{
+    top: -5px;
+    color: rgb(255, 23, 70);
+}
+.signin_index input[name="email"]:focus ~ span::before,
+.signin_index input[name="password"]:focus ~ span::before,
+.signin_index input[name="email"]:valid ~ span::before,
+.signin_index input[name="password"]:valid ~ span::before{
+    width: 100%;
+}
+.forgot_password{
+    padding-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    width: 50%;
+    color: crimson;
+    cursor: pointer;
+}
+.forgot_password:hover{
+    text-decoration: underline;
+}
+.signin_index .button button{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.signin_index .button button:hover{
+    color: crimson;
+    background: none;
+}
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+.signup_link a{
+    color: crimson;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
